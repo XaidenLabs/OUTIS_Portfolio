@@ -1,0 +1,84 @@
+import { NavLink, Project, Service } from "./types.utils";
+import { GiScrollQuill } from "react-icons/gi";
+import { FaChartLine } from "react-icons/fa6";
+import { FaGlobeAfrica } from "react-icons/fa";
+import { RiUserCommunityFill } from "react-icons/ri";
+
+
+export const navLinks: NavLink[] = [
+  { name: "Home", href: "#home" },
+  { name: "About", href: "#about" },
+  { name: "Projects", href: "#projects" },
+  { name: "Services", href: "#services" },
+  { name: "Contact", href: "#contact" },
+];
+
+
+
+
+
+export const projects: Project[] = [
+  {
+    title: "A Framework for Effective Writing",
+    description: "A look into the structured process I use for all my work, this piece breaks down my framework for turning raw research and ideas into clear, effective writing.",
+    image: "/assets/projects/proj1.png",
+    link: "https://angrypacifist.substack.com/p/research-and-drafting?r=ot0to",
+    whatFor: "Personal",
+    tech: ["Writing Process", "Content Strategy", "Research Skills", "Thought Leadership"],
+  },
+  {
+    title: "Nigeria's EV Revolution",
+    description: "A deep-dive market analysis of Nigeria's EV and EV charging infrastructure.",
+    image: "/assets/projects/proj2.png",
+    link: "https://angrypacifist.substack.com/p/advancing-electric-mobility?r=ot0to",
+    tech: ["Market Analysis", "Technology Analysis ", "Emerging Markets", "Nigeria"],
+    whatFor: "Bounty",
+  },
+  {
+    title: "Solana's Real-World Impact",
+    description: "An analysis of how Solana's core technologies can be used to build practical solutions.",
+    image: "/assets/projects/proj4.jpg",
+    link: "https://angrypacifist.substack.com/p/real-world-solutions-with-solana?r=ot0to",
+    tech: ["Use Case Analysis", "Solana Ecosystem", "Product Strategy"],
+    whatFor: "Bounty",
+  },
+  {
+    title: "An Introduction to Futarchy",
+    description: "An exploration of advanced DAO governance models. This article breaks down the concept of Futarchy—a system where prediction markets determine policy.",
+    image: "/assets/projects/proj3.png",
+    link: "https://angrypacifist.substack.com/p/the-meta-dao-and-futarchy?r=ot0to",
+    tech: ["DAO Governance", "Futarchy", "Web3", "Blockchain"],
+    whatFor: "Hackathon",
+  }
+];
+
+export const services: Service[] = [
+  {
+    icon: <GiScrollQuill size={48} className='text-indigo-600' />,
+    title: "Content Strategy & Creation",
+    description: "From in-depth articles to compelling brand narratives, I create content that educates, engages, and establishes authority.",
+    features: ["Technical Writing & Explainers", "Long-Form Blog Posts & Articles", "Ghostwriting & Thought Leadership", "Content & Editorial Calendars"],
+    isPopular: true
+  },
+  {
+    icon: <RiUserCommunityFill size={48} className='text-indigo-600' />,
+    title: "Community Building & Management",
+    description: "I build, manage, and scale vibrant online communities from the ground up, turning passive users into active, loyal advocates.",
+    features: ["Discord & Telegram Architecture", "Moderation Strategy & Team Training", "Engagement & Retention Campaigns", "Community Analytics & Health Reporting"],
+    isPopular: false
+  },
+  {
+    icon: <FaChartLine size={48} className='text-indigo-600' />,
+    title: "Social Media & Growth Strategy",
+    description: "A data-informed approach to social media that focuses on sustainable audience growth and meaningful interaction.",
+    features: ["Multi-Platform Management (X, LinkedIn, etc.)", "Brand Voice & Tone Development", "Growth Campaigns & Audience Analysis", "Performance Tracking & Reporting"],
+    isPopular: false
+  },
+  {
+    icon: <FaGlobeAfrica size={48} className='text-indigo-600' />,
+    title: "Partnerships & Ecosystem Outreach",
+    description: "Forging strategic alliances that expand your reach, drive co-marketing success, and embed your project within the wider ecosystem.",
+    features: ["Partner Identification & Vetting", "Outreach & Relationship Management", "Co-Marketing Campaign Execution", "Ecosystem & Market Research"],
+    isPopular: false
+  }
+];
