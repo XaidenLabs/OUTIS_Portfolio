@@ -41,8 +41,8 @@ const Contact = () => {
       { threshold: 0.1 }
     );
 
-    sectionRef.current && observer.observe(sectionRef.current);
-    formRef.current && formObserver.observe(formRef.current);
+    if (sectionRef.current) observer.observe(sectionRef.current);
+    if (formRef.current) formObserver.observe(formRef.current);
 
     return () => {
       observer.disconnect();
@@ -58,16 +58,23 @@ const Contact = () => {
         isVisible: true,
       });
 
-      // ✅ Reset form after successful submission
       if (formRef.current) {
         formRef.current.reset();
       }
+
+      setTimeout(() => {
+        hideNotification();
+      }, 3000);
     } else if (state.errors && Object.keys(state.errors).length > 0) {
       setNotification({
         type: NotificationType.ERROR,
         message: "Please fill all fields correctly.",
         isVisible: true,
       });
+
+      setTimeout(() => {
+        hideNotification();
+      }, 3000);
     }
   }, [state]);
 
